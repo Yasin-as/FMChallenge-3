@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    /* Text */
+    --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --SoftRed: hsl(14, 88%, 65%);
+    --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --DarkGrayishBlue: hsl(240, 6%, 50%);
+    /* Front  */
+    --FontSize: 12px;
+    --FontFamily: 'Kumbh Sans', sans-serif; /*400, 700 Weight */
+    /* Background gradient */
+    --SoftViolet: hsl(273, 75%, 66%);
+    --SoftBlue: hsl(240, 73%, 65%);
+    /* Dividers */
+    --LightGrayishBlue: hsl(240, 5%, 91%);
+}
+html body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--FontFamily); 
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, var(--SoftViolet), var(--SoftBlue) );
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    height: 60vh;
+}
+.image-left{
+    width: 50%;
+    height: 50vh;
+}
+#img-main{
+    position: relative;
+    left: -100px;
+}
+
+#img-box{
+    position: relative;
+    top: -230px;
+    left: -105px;
+
+}
+#img-pattern{
+    position: relative;
+    top: -930px;
+    left: -600px;
+
+}
+
+
+
+
+
+.content-right{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.accordion{
+    height: fit-content;
+}
+
+.accordion-item{
+    border: none;
+    margin-top: 1rem;
+}
+.accordion-item button{
+    padding-left: 0;
+    width: 30rem;
+    border-bottom: 1px solid var(--LightGrayishBlue);
+}
+.accordion-item .accordion-body{
+    padding-left: 0;
+    font-weight: 400;
+}
+
+.accordion-item button:active{
+    font-weight: 700;
+    background-color: #fff;
+}
+
+/* mobile */
+@media screen and (max-width: 375px)  {
+
+    html body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    body .container{
+        flex-direction: column;
+        width: 90%;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+    .image-left{
+        height: 25vh;
+        position: relative;
+        top: -10px;
+    }
+    .bg-image{
+        width: inherit;
+    }
+    #img-main{
+        width: 250px;
+        left: -50px;
+        top: -70px;
+    }
+    #img-box{
+        width: 6rem;
+        left: -50px;
+        top: -185px;
+        z-index: 1;
+    }
+    #img-pattern{
+        display: none;
+    }
+    .content-right{
+        width: inherit;
+        height: 70vh;
+        align-items: center;
+    }
+    h1{
+        font-weight: bold;
+    }
+    .accordion{
+        height: 60vh;
+    }
+
+    .accordion button{
+        width: inherit;
+        font-size: 12px;
+    }
+}
